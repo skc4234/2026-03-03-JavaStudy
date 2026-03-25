@@ -84,7 +84,7 @@ package com.sist.main;
  *              	=> 생성자 이용
  *              	@Autowired
  *              	A(B b) {
- *              		this.b = b;
+ *              		this.b = b;  
  *              	}
  *              }
  *            - 결합성이 강하다 => 의존도가 상위클래스에 묶여있다 => 영향력이 높다
