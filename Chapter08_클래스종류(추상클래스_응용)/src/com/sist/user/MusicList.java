@@ -40,11 +40,29 @@ public class MusicList extends JPanel {
         //                         이미지		
 		String[] col = {"순위","등폭","","곡명", "가수명"};
 		Object[][] row = new Object[0][5];
-		model = new DefaultTableModel(row, col);
+		//model = new DefaultTableModel(row, col);
+		
+		model = new DefaultTableModel(row,col) {
+
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			@Override
+			public Class<?> getColumnClass(int columnIndex) {
+				// TODO Auto-generated method stub
+				return getValueAt(0, columnIndex).getClass();
+			}
+			
+		};
+		
+		
 		table = new JTable(model);
 		
 		table.setRowHeight(40);
-		
+
 		
 		JScrollPane js = new JScrollPane(table);
 		js.setBounds(10, 120, 980, 580);
