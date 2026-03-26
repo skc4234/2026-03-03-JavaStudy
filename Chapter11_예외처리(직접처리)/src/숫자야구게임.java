@@ -1,5 +1,18 @@
 /*
- *  
+ *   면접 => 무중단 프로그램 짜는법? => nginix?
+ *   java 1.8 => sun이 만든 마지막 버전 => 호환성이 좋음 => 실무
+ *   최신버전 java 9.0?
+ *   
+ *   
+ *           추상클래스 vs *인터페이스
+ *   다중상속     x           o
+ *   구성요소  변수, 메소드   상수, 추상메소드, default 메소드
+ *   		 추상메소드
+ *   키워드    extends    implements
+ *    구현할 메소드가 많으면 추상클래스 사용
+ *   
+ *   
+ *   Spring은 클래스 관리자 => 인터페이스
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -44,7 +57,7 @@ public class 숫자야구게임 extends JFrame implements ActionListener, Rand {
 		setSize(300,400);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+		  
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
