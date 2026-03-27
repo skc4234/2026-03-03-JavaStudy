@@ -1,7 +1,7 @@
 package com.sist.exception;
 /*
  *  IOException => Exception => Throwable
- * 
+ *   
  */
 import java.io.*;
 import java.sql.SQLException;
@@ -32,7 +32,7 @@ public class 예외처리_2 {
 		}
 		/*
 		 *  try-resource : 자동 닫기
-		 *  throws
+		 *  *throws
 		 *  throw
 		 *  사용자 정의
 		 *  -----------------------
