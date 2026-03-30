@@ -152,8 +152,11 @@ public class FoodManager implements Manager {
 		for(FoodVO vo : foods) {
 			if(vo.getType().contains(type)) {
 				food[i] = vo;
+				//System.out.println(food[i].getName());
 			}
 		}
+		
+		System.out.println(food.length);
 		
 		return food;
 	}

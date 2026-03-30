@@ -35,6 +35,7 @@ public class MainClass {
 		String type = scan.next();
 		FoodVO[] filter = fm.food_filter(type);
 		System.out.println(filter.length);
+		//  System.out.println(filter[filter.length-1].getName());
 		// 오류
 //		for(int i=0; i<filter.length; i++) {
 //			System.out.println("========================================");
@@ -48,6 +49,9 @@ public class MainClass {
 //			System.out.println("평점 : " + filter[i].getScore());
 //			System.out.println("========================================");
 //		}
+		for(FoodVO f : filter) {
+			
+		}
 		
 		
 		
