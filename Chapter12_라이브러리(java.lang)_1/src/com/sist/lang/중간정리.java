@@ -45,14 +45,14 @@ import java.util.regex.Pattern;
  *            => 뒤에서부터 문자 찾기
  *         - String replace(String s1, String s2)
  *            => s1을 s2로 변경
- *         - String replaceAll(String s1, String s2)
- *            => s1(정규식)을 이용해서 s2로 변경
+ *         - String replaceAll(String regex, String s2)
+ *            => regex(정규식)을 이용해서 s2로 변경
  *         - String valueOf(Object o)
  *            => 모든 데이터형을 문자열로 변환
  *         - String substring(int b)        => 처음부터 인덱스 번호만큼 자르기
  *                  substring(int b, int e) => b부터 e-1 만큼 자르기
- *         - String[] split(String rex)
- *            => 문자열 분리
+ *         - String[] split(String regex)
+ *            => 정규식을 사용해서 문자열 분리
  *      
  *      - StringBuffer / StringBuilder
  *      
