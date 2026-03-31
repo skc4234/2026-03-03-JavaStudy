@@ -67,7 +67,7 @@ public class CustomerMainFrame extends JFrame implements ActionListener {
 	JMenuItem exit = new JMenuItem("종료");
 	
 	public CustomerMainFrame() {
-		JMenu menu = new JMenu("메뉴");
+		JMenu menu = new JMenu("메뉴"); 
 		menu.add(list); menu.add(find); 
 		menu.addSeparator(); // 구분자
 		menu.add(exit);

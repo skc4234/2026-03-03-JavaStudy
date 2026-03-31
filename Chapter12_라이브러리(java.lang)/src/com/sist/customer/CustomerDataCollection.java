@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CustomerDataCollection {
 	public static CustomerVO[] customers = new CustomerVO[100];
-	public final static int LISTOFPAGE = 10;
+	public final static int LISTOFPAGE = 12;
 	// 고객 누구나 접근이 가능하다(public static)
 	// 초기화
 	static {
@@ -84,14 +84,14 @@ public class CustomerDataCollection {
 	
 	// 2. 목록출력 => 페이지 나누기
 	public int customerTotalPage() {
-		return (int)(Math.ceil(customers.length/10.0));
+		return (int)(Math.ceil(customers.length/(double)LISTOFPAGE));
 	}
 	
 	public CustomerVO[] customerListData(int page) {
 		int totalpage = customerTotalPage();
-		int row = 10;
-		if(totalpage == page && customers.length%10>0) {
-			row = customers.length%10;
+		int row = LISTOFPAGE;
+		if(totalpage == page && customers.length%LISTOFPAGE>0) {
+			row = customers.length%LISTOFPAGE;
 		}
 		
 		CustomerVO[] cust = new CustomerVO[row];
@@ -100,7 +100,7 @@ public class CustomerDataCollection {
 		// => 오라클 자체 페이징 기법 => 인라인뷰
 		// => MySql => limit
 		int j=0; // 10개씩 나눠주는 변수
-		int pagecnt = (page*10)-10; // 배열의 시작점
+		int pagecnt = (page*LISTOFPAGE)-LISTOFPAGE; // 배열의 시작점
 		for(int i=0; i<customers.length; i++) {
 			if(j<row && i>=pagecnt) {
 				cust[j] = customers[i];
