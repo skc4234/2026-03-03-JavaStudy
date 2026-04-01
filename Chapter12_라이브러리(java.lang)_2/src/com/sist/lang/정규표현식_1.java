@@ -40,10 +40,10 @@ public class 정규표현식_1 {
 		System.out.println(result);
 		
 		String res = "맛있는,맛있고,맛있게,맛있어,맛있네,맛있나,맛없네,맛있난요";
-		Pattern p = Pattern.compile("맛있."); // 맛있 뒤에 1글자
+		Pattern p = Pattern.compile("맛있.*"); // 맛있 뒤에 1글자
 		Matcher m = p.matcher(res);
 		while(m.find()) {
-			System.out.println(m.group());
+			System.out.println(  m.group());
 		}
 		
 		System.out.println("======== 데이터 추출 =========");
