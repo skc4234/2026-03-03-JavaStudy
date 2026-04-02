@@ -78,8 +78,8 @@
      
 
 
-|----|순서|중복|
-|----|----|----|
-|List|순서 유지|중복 허용|
-|Set|순서 없는|중복 불가|
-|Map|*강조*|테스트2|
+|----|순서|중복|종류|
+|----|----|----|----|
+|List|순서 유지|중복 허용|**ArrayList**/LinkedList/Vector|
+|Set|순서 없는|중복 불가|**HashSet**/TreeSet|
+|Map|<Key,Value>로 구성|Key는 중복 불가, Value는 중복 허용|**HashMap**/HashTable|
