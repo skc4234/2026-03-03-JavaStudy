@@ -74,12 +74,53 @@
 
 04/02 - 제네릭, 컬렉션_1
 1. 제네릭
-    
+    => 클래스나 메소드를 정의할때 사용할 데이터형을 표준화해서 사용
+    => 어떤 데이터형이 대입되고 리턴될 지 알 수 있다 => 데이터형의 안정성, 가독성이 좋다
+    => 제네릭 타입 <클래스명>
+       => int, double 같은 일반 데이터형은 Wrapper클래스를 사용해야 한다 => <Integer>, <Double>, ...
+    => 컬렉션에서는 <T> : Type, <E> : Element, **<K, V>** : Key, Value 등이 사용된다
      
 
-
-|----|순서|중복|종류|
+2. 컬렉션
+    => 데이터들을 모아놓은 메모리들을 모아놓은 자료구조
+    => 객체들을 쉽게 관리할 수 있게 만든 프레임워크
+    => 배열의 단점인 배열 크기 고정과 기능 부족을 보완
+   
+|Collection|특징|중복|종류|
 |----|----|----|----|
 |List|순서 유지|중복 허용|**ArrayList**/LinkedList/Vector|
-|Set|순서 없는|중복 불가|**HashSet**/TreeSet|
+|Set|순서 없음|중복 불가|**HashSet**/TreeSet|
 |Map|<Key,Value>로 구성|Key는 중복 불가, Value는 중복 허용|**HashMap**/HashTable|
+
+ 1. List
+     - 객체를 인덱스로 관리
+        => 인덱스로 객체 검색, 삭제 등이 가능
+     - ArrayList는 수정/삭제가 느리지만 검색이 빠르다
+        => 비동기적이다
+        => 주로 웹의 핵심이 되는 데이터베이스를 이용할 때 사용된다 
+     - Vector는 ArrayList와 구조가 비슷하다
+        => 수정/삭제가 느리지만 검색이 빠르다
+        => 동기적이므로 네트워크 프로그래밍에서 사용된다
+     - LinkedList는 검색이 느린 대신 수정/삭제가 빠르다
+        => 파일 관리 등 수정/삭제가 많은 프로그램에서 사용된다
+     - 메소드 종류
+        1) **add(E e)** : 주어진 객체를 마지막에 추가
+        2) add(int index, E e) : 객체를 인덱스 번호에 추가 => 뒤에 객체들은 인덱스 번호가 한칸씩 밀림
+            ex) List<Integer> list = new ArrayList<Integer>();
+			      list => 0 1 2 3 4
+                  list.add(7,2) => 0 1 **7** 2 3 4
+        3) set(int index, E e) : 인덱스에 있는 객체를 주어진 객체로 변경
+        4) contains(Object o) : 객체가 포함되었는지 여부
+        5) **get(int index)** : 인덱스에 저장된 객체 리턴
+        6) **isEmpty()** : 컬렉션이 비어있으면 true 리턴
+        7) **size()** : 저장된 전체 객체 수 리턴
+        8) **clear()** : 모든 객체 삭제 - ex) 장바구니 비우기
+        9) remove(int index) : 인덱스에 저장된 객체 삭제
+    --------------------------------------------------------
+     - 추가 메소드
+        1) **subList(int start, int end)** : 인덱스 번호 start 부터 end-1까지의 객체를 저장
+            => **페이징 기법으로 사용**
+        2) **retainAll(Collection c)** : 현재 컬렉션과 주어진 컬렉션의 같은 객체(교집합)들만 저장
+        3) **addAll(Collection c)** : c에 있는 객체를 전부 복사
+        4) **containsAll(Collection c)** : c와 교집합, retainAll과 비슷
+        5) **Collections.sort(Collection c)** : 컬렉션을 오름차순으로 정렬
