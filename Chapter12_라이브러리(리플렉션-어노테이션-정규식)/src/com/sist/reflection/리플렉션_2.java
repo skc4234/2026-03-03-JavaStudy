@@ -44,10 +44,10 @@ class Student {
 }
 public class 리플렉션_2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 		try {
-			Student std = new Student();
+			Student std = new Student(); 
 			
 			Class cls = std.getClass();
 			Field f = cls.getDeclaredField("name");
