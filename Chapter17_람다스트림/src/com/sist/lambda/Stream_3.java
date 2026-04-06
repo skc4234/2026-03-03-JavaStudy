@@ -117,7 +117,7 @@ public class Stream_3 {
 		Optional<Order> maxOrder = orders.stream().max(Comparator.comparing(Order::getPrice));
 		System.out.println("maxOrder : " + maxOrder);
 		
-		System.out.println();
+		System.out.println("");
 	}
 
 }
