@@ -111,6 +111,7 @@ public class Lambda_4 {
 		System.out.println("=========== 가격 기준 별 정렬 ===========");
 		System.out.println("=========== 카테고리별 그룹핑 ===========");
 		System.out.println("============ 평점별 그룹핑 ============");
+		System.out.println("=======");
 	}
 
 }
