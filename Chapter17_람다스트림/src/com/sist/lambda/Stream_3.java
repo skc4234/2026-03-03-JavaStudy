@@ -116,6 +116,8 @@ public class Stream_3 {
 		System.out.println("====== 가장 많이 주문한 사람 ======");
 		Optional<Order> maxOrder = orders.stream().max(Comparator.comparing(Order::getPrice));
 		System.out.println("maxOrder : " + maxOrder);
+		
+		System.out.println();
 	}
 
 }
