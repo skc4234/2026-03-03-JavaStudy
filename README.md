@@ -127,3 +127,39 @@
       
 
 ## 04/03 - 컬렉션_2(List, Set, Map)
+
+
+
+## 04/06 - 람다식
+
+
+## 04/07 - 람다식, 람다스트림, IO_1
+ 1. 람다식
+     - 이름 없는 함수
+       (매개변수) -> {구현문}
+     - 메소드 참조 가능
+       System.out::println
+     - 생성자 참조 가능
+       Customer::new
+ 2. 람다스트림
+     - 주요 메소드
+        - stream()
+        - filter()
+        - map()
+        - forEach()
+        - collect()
+ 3. IO
+     - 바이트 스트림(1byte)
+        InputStream - FileInputStream
+        OutputStream - FileOutputStream
+     - 문자 스트림(2byte)
+        ReaderStream - FileReader
+        WriterStream - FileWriter
+     - 보조 스트림
+        BufferedInputStream - BufferedReader
+        BufferedOutputStream - BufferedWriter
+     - 객체 스트림
+        ObjectInputStream
+        ObjectOutputStream
+    - File file = new File("");
+      
