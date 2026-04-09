@@ -197,8 +197,8 @@
    - 프로세스 : 한 개의 프로그램
    - 쓰레드 : 한 개의 프로세스 안에서 여러개의 기능을 동시에 수행
    - 구현 방법
-     - Thread 상속
-       class A extends Thread
+     1. Thread 상속
+        class A extends Thread
      2. **인터페이스 구현**
         class A implements Runnable
      3. **ExecutorService**
