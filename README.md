@@ -162,4 +162,53 @@
         ObjectInputStream
         ObjectOutputStream
     - File file = new File("");
-      
+## 04/08 - IO 스트림
+
+
+## 04/09 - Files/Paths 클래스, 네트워크(내부클래스, 쓰레드, URL)
+ 1. Files 클래스
+    - 파일과 디렉토리 제어하는 기능을 가진 클래스
+    - java.nio.file.*
+    - 대부분 static 메소드
+    - 주요 메소드
+      - exists(경로명) : 파일 존재 여부
+      - createFile(경로명) : 새 파일 생성
+      - createDirectory(경로명) : 새 폴더 생성
+      - delete(경로명) : 파일 삭제
+      - readAllLines() : 모든 줄을 List<String> 읽음
+      - write(경로명, content) : 파일에 content 쓰기)
+      - copy(source, target) : 파일 복사
+      - move() : 이동
+      - list() : 파일 목록 출력
+2. Paths 클래스 / Path 객체
+   - 파일/디렉토리의 위치를 나타내는 객체
+   - 경로명을 얻기 위해서는 Path 객체 필요
+   - 파일/디렉토리의 위치를 나타내는 객체
+   - Path path = Paths.get(절대경로/상대경로);
+3. 내부클래스
+   => 다른 클래스와 연결해서 사용하기 쉽다
+   - 종류
+     - 멤버 클래스
+     - static 멤버 클래스
+     - 익명 클래스
+       - extends 하지 않고 오버라이딩 할때 사용
+     - 지역 클래스
+4. 쓰레드
+   - 프로세스 : 한 개의 프로그램
+   - 쓰레드 : 한 개의 프로세스 안에서 여러개의 기능을 동시에 수행
+   - 구현 방법
+     - Thread 상속
+       class A extends Thread
+     2. **인터페이스 구현**
+        class A implements Runnable
+     3. **ExecutorService**
+        => 쓰레드 풀 관리
+        => 쓰레드를 미리 생성해서 관리 => 필요할때 할당/회수 => 재사용
+   - 쓰레드의 생명주기
+     new ===== Runnable ===== Running ==== Terminated(Dead)
+                                    ㄴ===== Blocked
+5. URL
+   - 웹 연결 => 데이터 수집
+   - URL / URL
+     => URL url = new URL(주소) ===> 검증 필요
+     => URL url = URI.create(주소).toURL() ===> URI로 검증완료
