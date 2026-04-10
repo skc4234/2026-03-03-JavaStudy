@@ -212,3 +212,11 @@
    - URL / URL
      => URL url = new URL(주소) ===> 검증 필요
      => URL url = URI.create(주소).toURL() ===> URI로 검증완료
+## 04/10 - 네트워크(TCP)
+1. TCP / UDP
+   - TCP는 연결형, 속도는 느리지만 안정성이 높다
+   - UDP는 비연결형, 속도가 빠른 대신 신뢰성이 낮다
+2. Socket / ServerSocket
+3. IP / Port
+   - 서버는 고정 IP지만 클라이언트는 유동적
+4. Protocol
